@@ -4,5 +4,5 @@
     <string name="lbl_fname">Nombres</string>
     <string name="lbl_lname">Apellidos</string>
     <string name="ht_fname">Pedro</string>
-    <string name="lbl_reg_act">Resgistro de usuarios</string>
+    <string name="lbl_reg_act">REGISTRO DE USUARIOS</string>
 </resources>
