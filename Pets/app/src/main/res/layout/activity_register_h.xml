@@ -30,6 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:hint="Peter"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
@@ -51,6 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:hint="McDonalds"
                 android:inputType="textPersonName" />
 
         </LinearLayout>
@@ -73,6 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:hint="Peter@gmail.com"
                 android:inputType="textEmailAddress" />
         </LinearLayout>
 
@@ -107,16 +110,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/btn_register"
-                android:text="Register" />
+                android:background="@color/btn_login"
+                android:text="Register"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
             <Button
                 android:id="@+id/button4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/colorAccent"
-                android:text="LOGIN" />
+                android:background="@color/colorPrimaryDark"
+                android:text="LOGIN"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
         </LinearLayout>
 
     </LinearLayout>
