@@ -2,6 +2,7 @@ package com.example.pets;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -16,6 +17,13 @@ public class LoginActivity extends AppCompatActivity {
     }
     public void Btn_Login(View view){
         Toast.makeText(this, "You have pressed login button", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent( this, InboxActivity.class);
+        startActivity(intent);
+    }
+    public void Btn_Signup(View view){
+        Toast.makeText(this, "You have pressed sign in button", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent( this, RegisterActivity.class);
+        startActivity(intent);
     }
 
    /*
