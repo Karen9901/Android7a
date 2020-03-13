@@ -13,7 +13,8 @@
         <activity android:name=".RegisterActivityH" />
         <activity
             android:name=".LoginActivity"
-            android:label="Login">
+            android:label="@string/txt_loginbar"
+            android:theme="@style/LoginTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
