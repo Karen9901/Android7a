@@ -63,17 +63,18 @@ public class Palette extends AppCompatActivity
         switch (item.getItemId()){
 
             case R.id.icHelp :
-                Toast.makeText(this, "You've pressed Help icon", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this, HelpActivity.class);
+                startActivity(intent);
                 break;
 
             case R.id.icTransparent :
-                Toast.makeText(this, "You've pressed Transparent icon", Toast.LENGTH_SHORT).show();
+                vAlpha.setProgress(1);
                 break;
 
             case R.id.iteTransparent :
                 vAlpha.setProgress(0);
-                //Toast.makeText(this, "This color is going to change", Toast.LENGTH_SHORT).show();
                 break;
+            //Toast.makeText(this, "This color is going to change", Toast.LENGTH_SHORT).show();
 
             case R.id.iteSemitransparent :
                 vAlpha.setProgress(128);
@@ -117,22 +118,41 @@ public class Palette extends AppCompatActivity
                 break;
 
             case R.id.iteCyan :
+                vRed.setProgress(0);
+                vGreen.setProgress(160);
+                vBlue.setProgress(255);
+                vAlpha.setProgress(128);
                 break;
 
             case R.id.iteMagenta :
+                vRed.setProgress(0);
+                vGreen.setProgress(255);
+                vBlue.setProgress(255);
+                vAlpha.setProgress(128);
                 break;
 
             case R.id.iteYellow :
+                vRed.setProgress(255);
+                vGreen.setProgress(255);
+                vBlue.setProgress(0);
+                vAlpha.setProgress(128);
                 break;
 
             case R.id.iteReset :
+                vRed.setProgress(0);
+                vGreen.setProgress(0);
+                vBlue.setProgress(0);
+                vAlpha.setProgress(0);
                 break;
 
             case R.id.iteAboutof :
                 //Go/jump to Aboutof Activity
-                Intent intent = new Intent(this, AboutofActivity.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(this, AboutofActivity.class);
+                startActivity(intent2);
                 break;
+            case  R.id.iteClose:
+                Palette.this.finish();
+                System.exit(0);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -156,7 +176,14 @@ public class Palette extends AppCompatActivity
 
         switch (item.getItemId()){
             case R.id.iteHelp :
-                Toast.makeText(this, "You've pressed Help icon", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this,HelpActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.iteReset:
+                vAlpha.setProgress(0);
+                vRed.setProgress(0);
+                vGreen.setProgress(0);
+                vBlue.setProgress(0);
                 break;
         }
 

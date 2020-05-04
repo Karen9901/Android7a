@@ -23,7 +23,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/lbl_red"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                app:fontFamily="casual" />
 
             <SeekBar
                 android:id="@+id/sbrRed"
@@ -46,7 +47,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/lbl_green"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                app:fontFamily="casual" />
 
             <SeekBar
                 android:id="@+id/sbrGreen"
@@ -69,7 +71,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/lbl_blue"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                app:fontFamily="casual" />
 
             <SeekBar
                 android:id="@+id/sbrBlue"
@@ -92,7 +95,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/lbl_alpha"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                app:fontFamily="casual" />
 
             <SeekBar
                 android:id="@+id/sbrAlpha"
