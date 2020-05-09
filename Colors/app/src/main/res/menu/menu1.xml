@@ -15,9 +15,11 @@
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/iteTransparent"
         android:title="@string/app_name">
         <menu>
+            <item
+                android:id="@+id/iteTransparent"
+                android:title="@string/lblOpTransparent" />
             <item
                 android:id="@+id/iteSemitransparent"
                 android:title="@string/lblOpSemitransparent" />

@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Palette extends AppCompatActivity
@@ -23,12 +24,14 @@ public class Palette extends AppCompatActivity
     private SeekBar vBlue = null;
     private SeekBar vAlpha = null;
     private View vFilter = null;
+    private TextView message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_palette);
 
+        message = findViewById(R.id.txtMessage);
         //Code here .....
         //Get components' id's
         vRed = findViewById(R.id.sbrRed);
@@ -68,11 +71,14 @@ public class Palette extends AppCompatActivity
                 break;
 
             case R.id.icTransparent :
-                vAlpha.setProgress(1);
+
+                vAlpha.setProgress(0);
                 break;
 
             case R.id.iteTransparent :
+                Toast.makeText(this, "This color is going to change", Toast.LENGTH_SHORT).show();
                 vAlpha.setProgress(0);
+                message.setText("Transparent ");
                 break;
             //Toast.makeText(this, "This color is going to change", Toast.LENGTH_SHORT).show();
 
@@ -81,17 +87,28 @@ public class Palette extends AppCompatActivity
                 vRed.setProgress(0);
                 vGreen.setProgress(0);
                 vBlue.setProgress(0);
+                message.setText("Semitransparent");
                 break;
 
             case R.id.iteOpaque :
+                vRed.setProgress(0);
+                vGreen.setProgress(0);
+                vBlue.setProgress(0);
                 vAlpha.setProgress(255);
+                message.setText("Opaque");
                 break;
 
             case R.id.iteBlack :
+                vAlpha.setProgress(255);
+                message.setText("Black");
                 break;
 
             case R.id.iteWhite :
-                //Code to change color
+                vRed.setProgress(255);
+                vGreen.setProgress(255);
+                vBlue.setProgress(255);
+                vAlpha.setProgress(128);
+                message.setText("White");
                 break;
 
             case R.id.iteRed :
@@ -99,6 +116,7 @@ public class Palette extends AppCompatActivity
                 vGreen.setProgress(0);
                 vBlue.setProgress(0);
                 vAlpha.setProgress(128);
+                message.setText("Red");
                 break;
 
             case R.id.iteGreen :
@@ -107,6 +125,7 @@ public class Palette extends AppCompatActivity
                 vGreen.setProgress(255);
                 vBlue.setProgress(0);
                 vAlpha.setProgress(128);
+                message.setText("Green");
                 break;
 
             case R.id.iteBlue :
@@ -115,6 +134,7 @@ public class Palette extends AppCompatActivity
                 vGreen.setProgress(0);
                 vBlue.setProgress(255);
                 vAlpha.setProgress(128);
+                message.setText("Blue");
                 break;
 
             case R.id.iteCyan :
@@ -122,13 +142,15 @@ public class Palette extends AppCompatActivity
                 vGreen.setProgress(160);
                 vBlue.setProgress(255);
                 vAlpha.setProgress(128);
+                message.setText("Cyan");
                 break;
 
             case R.id.iteMagenta :
-                vRed.setProgress(0);
-                vGreen.setProgress(255);
+                vRed.setProgress(255);
+                vGreen.setProgress(0);
                 vBlue.setProgress(255);
                 vAlpha.setProgress(128);
+                message.setText("Magenta");
                 break;
 
             case R.id.iteYellow :
@@ -136,6 +158,7 @@ public class Palette extends AppCompatActivity
                 vGreen.setProgress(255);
                 vBlue.setProgress(0);
                 vAlpha.setProgress(128);
+                message.setText("Yellow");
                 break;
 
             case R.id.iteReset :
@@ -147,9 +170,9 @@ public class Palette extends AppCompatActivity
 
             case R.id.iteAboutof :
                 //Go/jump to Aboutof Activity
-                Intent intent2 = new Intent(this, AboutofActivity.class);
-                startActivity(intent2);
-                break;
+            Intent intent2 = new Intent(this, AboutofActivity.class);
+            startActivity(intent2);
+            break;
             case  R.id.iteClose:
                 Palette.this.finish();
                 System.exit(0);
@@ -178,6 +201,12 @@ public class Palette extends AppCompatActivity
             case R.id.iteHelp :
                 Intent intent = new Intent(this,HelpActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.iteRed :
+                vRed.setProgress(255);
+                vGreen.setProgress(0);
+                vBlue.setProgress(0);
+                vAlpha.setProgress(128);
                 break;
             case R.id.iteReset:
                 vAlpha.setProgress(0);
